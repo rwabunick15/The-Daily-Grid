@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Daily Grind - Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.png"> 
+</head>
+<body>
+
+    <header>
+       <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="The Daily Grind Cafe Logo" class="header-logo">
+                </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><b>Home</b></a></li>
+                <li><a href="about.html"><b>About</b></a></li>
+                <li><a href="product.html"><b>Products/Services</b></a></li>
+                <li><a href="menu.html"><b>Menu</b></a></li>
+                <li><a href="contact.html" class="active"><b>Contact</b></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content contact-page">
+        <section class="contact-form-container">
+            <h2>Get In Touch</h2>
+            <p>Send us a message and we'll get back to you within 24 hours.</p>
+
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name*</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message*</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+
+                <p id="confirmation-message" class="hidden"></p>
+                
+                <button type="submit" class="button primary">Send Message</button>
+            </form>
+        </section>
+
+        <section class="business-details-map">
+            <h2>Our Location & Hours</h2>
+            <div class="details-grid">
+                <div class="details-text">
+                    <p><strong>Address:</strong> 123 Coffee , Kigali , Rwanda</p>
+                    <p><strong>Phone:</strong> 250 788888888</p>
+                    <p><strong>Email:</strong> info@thedailygrind.com</p>
+                    <p><strong>Hours:</strong> Mon - Fri: 7am - 5pm | Sat - Sun: 8am - 4pm</p>
+                </div>
+               
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 The Daily Grind. All rights reserved. | <a href="contact.html">Contact Us</a></p>
+    </footer>
+    
+   <script src="java.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Daily Grind - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.png"> 
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="The Daily Grind Cafe Logo" class="header-logo">
+                </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active"><b>Home</b></a></li>
+                <li><a href="about.html"><b>About</b></a></li>
+                <li><a href="products.html"><b>Products/Services</b></a></li>
+                <li><a href="menu.html"><b>Menu</b></a></li>
+                <li><a href="contact.html"><b>Contact</b></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-banner">
+            <div class="hero-content">
+                <h2>Your Daily Dose of Comfort.</h2>
+                <p>Experience the perfect blend of ethically sourced beans and artisanal baking.</p>
+                <a href="menu.html" class="button primary">View Our Menu</a>
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <h3>Our Favorites</h3>
+            <div class="product-grid">
+                
+                <article class="product-card">
+                    <h4>Classic Latte</h4>
+                    <img src="classic.jpg" alt="Classic Latte" class="product-image">
+                    <p class="price">$4.50</p>
+                    <p>Smooth espresso, steamed milk, and a thin layer of foam.</p>
+                </article>
+
+                <article class="product-card">
+                    <h4>Butter Croissant</h4>
+                    <img src="croissant.webp" alt="Butter Croissant" class="product-image">
+                    <p class="price">$3.00</p>
+                    <p>Light, flaky, and baked fresh every morning.</p>
+                </article>
+
+                <article class="product-card">
+                    <h4>Signature Blend Beans</h4>
+                    <img src="bean.webp" alt="Signature Beans" class="product-image">
+                    <p class="price">$18.00</p>
+                    <p>Medium roast, notes of chocolate and caramel. Available for retail.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="carousel-section">
+            <h3>Cafe Views</h3>
+            <div class="image-carousel">
+                <img src="interior.jpg" alt="Cafe Interior 1" class="carousel-img active-slide">
+                <img src="making coffee.jpg" alt="Barista making coffee" class="carousel-img">
+                <img src="bakery display.webp" alt="Fresh Pastries Display" class="carousel-img">
+            </div>
+            <div class="carousel-dots">
+                <span class="dot active-dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 The Daily Grind. All rights reserved. | <a href="contact.html">Contact Us</a></p>
+    </footer>
+
+    <script src="java.js"></script>
+</body>
+</html>

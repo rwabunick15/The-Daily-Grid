@@ -1,0 +1,435 @@
+/* 2. Branding Requirement: Color Scheme */
+:root {
+    --color-primary: #6F4E37; /* Rich Coffee Brown (Dark) */
+    --color-secondary: #F5F5DC; /* Cream/Beige (Light Background) */
+    --color-accent: #B8860B; /* Warm Gold/Copper (Highlights) */
+    --color-text-dark: #333;
+    --color-text-light: #fff;
+    --font-heading: 'Poppins', sans-serif; /* 2. Branding Requirement: Typography */
+    --font-body: 'Open Sans', sans-serif;
+}
+/* --- Header Logo Styling --- */
+
+/* Ensures the image itself is constrained */
+.header-logo {
+    /* 5. CSS Requirement: Height and Width control */
+    height: 95px; /* Adjust this value (e.g., 40px or 50px) to control logo size */
+    width: auto; /* Keeps the logo proportional */
+    display: block; /* Important for clean layout */
+}
+
+/* Optional: If you want to keep the text version as a fallback */
+.logo h1 {
+    display: none; /* Hides the placeholder text if you use the image */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    background-color: var(--color-secondary);
+}
+
+/* --- Global Layout and Typography --- */
+.page-content {
+    padding: 40px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: var(--font-heading);
+    font-size: 2.2em;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 5px;
+}
+
+h3 {
+    font-family: var(--font-heading);
+    color: var(--color-text-dark);
+    margin-bottom: 15px;
+}
+
+/* --- Header and Navigation (5. CSS Requirement: Styled Navigation) --- */
+header {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: 15px 5%;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-family: var(--font-heading);
+    font-size: 1.8em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--color-secondary);
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+/* 5. CSS Requirement: Hover Effects */
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+}
+
+/* --- Buttons (5. CSS Requirement: Buttons) --- */
+.button, .cta-link {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: var(--font-heading);
+    margin-top: 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button.primary {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    border: 2px solid var(--color-accent);
+}
+
+.button.primary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+.button {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    border: 1px solid var(--color-primary);
+}
+.button:hover {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+}
+
+/* --- Home Page Specifics --- */
+.hero-banner {
+    background-image: url('placeholder_hero_background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 450px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    color: var(--color-text-light);
+}
+
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: 1;
+}
+
+.hero-content {
+    z-index: 2;
+}
+
+/* --- Product Cards (5. CSS Requirement: Grid/Flexbox) --- */
+.featured-products, .products-list {
+    padding: 40px 5%;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.product-card {
+    background-color: var(--color-text-light);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-weight: bold;
+    color: var(--color-accent);
+    margin: 5px 0 10px;
+}
+
+/* --- Carousel Styling (JS Feature) --- */
+.carousel-section {
+    padding: 40px 5%;
+    text-align: center;
+}
+
+.image-carousel {
+    max-width: 900px;
+    margin: 0 auto 20px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.carousel-img {
+    width: 100%;
+    height: auto;
+    display: none; 
+}
+
+.carousel-img.active-slide {
+    display: block;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active-dot, .dot:hover {
+    background-color: var(--color-primary);
+}
+
+
+/* --- Menu Page Styling (4. HTML Requirement: Table) --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+th, td {
+    border: 1px solid var(--color-secondary);
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    font-family: var(--font-heading);
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.food-list ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.food-list li {
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-left: 5px solid var(--color-accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.sourcing-image {
+    /* Moves the image to the left */
+    float: left; 
+    /* Ensures space between the image and the text */
+    margin-right: 20px; 
+    
+}
+
+/* --- Contact Page Styling (4. HTML Requirement: Forms) --- */
+.contact-page {
+    display: flex;
+    gap: 40px;
+}
+
+.contact-form-container, .business-details-map {
+    flex: 1;
+}
+
+#contactForm {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--font-body);
+}
+
+textarea {
+    resize: vertical;
+}
+
+.error {
+    color: #ff0000;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+#confirmation-message {
+    padding: 15px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Map Styling */
+.map-placeholder {
+    margin-top: 20px;
+    border: 2px solid var(--color-primary);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--color-text-dark);
+    color: var(--color-secondary);
+    text-align: center;
+    padding: 20px 5%;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--color-secondary);
+}
+
+/* --- 5. CSS Requirement: Responsive Layout --- */
+@media (max-width: 900px) {
+    .contact-page {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 15px;
+        justify-content: center;
+    }
+
+    nav ul li a {
+        padding: 8px 10px;
+        font-size: 0.9em;
+    }
+
+    .hero-banner {
+        height: 300px;
+    }
+    
+    .product-card {
+        margin-bottom: 20px;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr { border: 1px solid #ccc; margin-bottom: 10px; background-color: white;}
+
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%; 
+        text-align: right;
+    }
+
+    td::before {
+        content: attr(data-label); 
+        position: absolute;
+        left: 6px;
+        width: 45%; 
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+        text-align: left;
+    }
+}
